@@ -20,6 +20,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", ">= 12.0", "< 13.0"
 
   spec.add_runtime_dependency "jekyll", "> 3.5", "< 5.0"
-  spec.add_runtime_dependency "jekyll-timeago", "~> 0.13.1"
+  spec.add_runtime_dependency "jekyll-paginate-v2", "~> 3.0"
   spec.add_runtime_dependency 'wdm', '>= 0.1.0'
 end

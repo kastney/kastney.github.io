@@ -1,6 +1,27 @@
 # bundle exec jekyll serve --livereload
 
-title: "Jekyll Actions Demo"
+# General settings
+title: '@kastney'
 
+# Collections settings
+collections_dir: _collections
+collections:
+  blog:
+    output: true
+    permalink: /blog/:name/
+  games:
+    output: true
+    permalink: /games/:name/
+
+# Pagination setting
+pagination:
+  enabled: true
+  debug: false
+  permalink: '/:num/'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Build settings
 plugins:
-  - jekyll-timeago
+  - jekyll-paginate-v2
