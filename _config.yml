@@ -3,6 +3,12 @@
 # General settings
 title: '@kastney'
 
+# Language settings
+language: pt
+
+# Fav Icon settings
+favicon: "/assets/images/favicon.png"
+
 # Collections settings
 collections_dir: _collections
 collections:
