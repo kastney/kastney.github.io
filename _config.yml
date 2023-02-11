@@ -54,8 +54,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Gosto de passar meu tempo livre aprendendo sobre novos desenvolvimentos e 
   tendências na minha área de interesse.
 
-baseurl: "/github-pages" # the subpath of your site, e.g. /blog
-url: "https://kastney.github.io/" # the base hostname & protocol for your site, e.g. https://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. https://example.com
 favicon: "/assets/images/favicon.png" # the favicon for your site
 
 # Yat date format
