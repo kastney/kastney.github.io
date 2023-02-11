@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: blog
+title: Blog
 permalink: /blog/
 pagination:
   enabled: true
-  collection: blog
+  collection: 'blog'
   per_page: 4
 ---

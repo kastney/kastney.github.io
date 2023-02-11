@@ -1,6 +1,5 @@
 ---
-layout: default
+layout: home
+title: Início
 permalink: /
 ---
-
-<div class="card">Conteúdo</div>
