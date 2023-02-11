@@ -1,0 +1,8 @@
+home:
+  heading: "Kastney"
+  subheading: "Meu site"
+
+blog:
+  heading: "Blog"
+  subheading: "Aqui compartilho minhas descobertas e conhecimentos adquiridos sobre diversos assuntos."
+  banner: "/assets/images/banners/blog.jpg"

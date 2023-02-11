@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /
 ---
 
-Conteúdo
+<div class="card">Conteúdo</div>

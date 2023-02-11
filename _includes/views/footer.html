@@ -1,3 +1,39 @@
-<footer>
-    Rodapé
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+        {%- assign currentYear = 'now' | date: "%Y" -%}
+        {%- assign copyright = site.copyright
+            | replace: '{currentYear}', currentYear
+            | replace: '{author}', site.author
+            | replace: '(c)', '&copy;'
+            | replace: '(p)', '℗'
+            | replace: '(cleft)', '<span class="copyleft">&copy;</span>'
+        -%}
+      <div>{{ copyright }}</div>
+
+      <div class="footer-col rss-subscribe">Inscreva-se em
+        <a target="_blank" href="{{ "/feed.xml" | relative_url }}">RSS </a>
+        <a target="_blank" href="{{ "/feed.xml" | relative_url }}"><i class="fa fa-rss fa-1x"></i></a>
+      
+        <div id="donate-button-container">
+          <div id="donate-button"></div>
+          <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+          <script>
+          PayPal.Donation.Button({
+          env:'production',
+          hosted_button_id:'WK7267KMGYRBA',
+          image: {
+          src:'https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif',
+          alt:'Faça doações com o botão do PayPal',
+          title:'PayPal - The safer, easier way to pay online!',
+          }
+          }).render('#donate-button');
+          </script>
+        </div>          
+          
+      </div>
+    </div>
+  </div>
 </footer>

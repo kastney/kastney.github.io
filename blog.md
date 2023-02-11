@@ -1,7 +1,8 @@
 ---
-permalink: /games/
+layout: default
+permalink: /blog/
 pagination:
   enabled: true
-  collection: 'games'
+  collection: blog
   per_page: 4
 ---

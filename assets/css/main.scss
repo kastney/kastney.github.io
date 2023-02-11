@@ -1,0 +1,318 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Default theme colors
+$theme-colors: (
+  "coolblack": #090a0b,
+  "spacegrey": #353535,
+  "snowwhite": #eeeeee,
+);
+
+// Default brand colors
+$brand-colors: (
+  "orangered": #ff5100,
+  "greatgold": #f2cb05,
+  "greenblue": #008cff,
+);
+
+$theme-name: "{{ site.theme_color }}";
+$brand-name: "{{ site.brand_color }}";
+$theme-color: map-get($theme-colors, "snowwhite");
+$brand-color: map-get($brand-colors, "greenblue");
+
+@if map-has-key($theme-colors, $theme-name) {
+  $theme-color: map-get($theme-colors, $theme-name);
+} @else if str-index($theme-name, "#") == 1 {
+  $theme-color: {{ site.theme_color | default: '#ffffff' }};
+}
+
+@if map-has-key($brand-colors, $brand-name) {
+  $brand-color: map-get($brand-colors, $brand-name);
+} @else if str-index($brand-name, "#") == 1 {
+  $brand-color: {{ site.brand_color | default: '#ff5100' }};
+}
+
+$content-width: {{ site.content_width | default: '920px' }};
+
+@import "yat";
+
+/* Bibliography */
+ol.bibliography {
+  counter-reset: item
+}
+ol.bibliography li {
+  list-style-type: none;
+  list-style-type: none;
+  margin: 30px 0;
+}
+ol.bibliography {
+  counter-reset: item
+}
+ol.bibliography li:before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  width:3em;
+  position:absolute;
+  text-indent:-2em;
+
+  position: absolute;
+  text-align: right;
+  width: 4em;
+  margin-left: -4.4em;
+}
+
+ol.bibliography a {
+  position: relative;
+  padding-right: 8px;
+  font-size: 20px;
+  color: $grey-color;
+}
+ol.bibliography a:hover {
+  text-decoration: none;
+}
+ol.bibliography .ai-doi:hover {
+  color: #F1BC25;
+}
+ol.bibliography .ai-google-scholar-square:hover {
+  color: #4285F4;
+}
+ol.bibliography .ai-ieee:hover {
+  color: #0072AE;
+}
+ol.bibliography .ai-acmdl:hover {
+  color: #537032;
+}
+ol.bibliography .ai-elsevier:hover {
+  color: #FF6C00;
+}
+.ai-open-access {
+  color: #FF6C00;
+}
+
+ol.bibliography .fa-external-link-square:hover {
+  color: $brand-color;
+}
+
+/* Profile Header */
+.row-profile {
+  display: flex;
+  padding-bottom: 20px;
+}
+.col-profile-image {
+  width: auto;
+  padding-right: 20px;
+}
+.col-profile-title {
+  width: 60%;
+  padding-top: 10px;
+}
+.col-profile-title h4 {
+  padding-left: 3px;
+}
+
+.avatar {  
+  width: 150px;
+  height: 150px;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.profile-subtitle {
+  font-style: italic;
+  color: $grey-color;
+  font-weight: normal;
+}
+
+.social_conteiner {
+  text-align: left;
+  line-height: 1.75;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.social_link {
+  color: $text-color;
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+/* Profile Artigos */
+.profile_articles h3 {
+  font-style: normal;
+  color: $grey-color;
+  font-weight: bold;
+}
+.profile_articles .page-segments {
+  padding-top: 0px;
+  padding-bottom: 25px;
+}
+
+/* Nuvem de palavras */
+ul.cloud {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.75rem;
+  width: 90%;
+}
+ul.cloud a {
+  --size: 4;
+  --color: #a33;
+  color: $brand-color;
+  font-size: calc(var(--size) * 0.8rem + 0.5rem);
+  display: block;
+  padding: 0.125rem 0.25rem;
+  position: relative;
+  text-decoration: none;
+  opacity: calc((15 - (9 - var(--size))) / 15); 
+}
+ul.cloud a[data-weight="1"] { --size: 1; }
+ul.cloud a[data-weight="2"] { --size: 2; }
+ul.cloud a[data-weight="3"] { --size: 3; }
+ul.cloud a[data-weight="4"] { --size: 4; }
+ul.cloud a[data-weight="5"] { --size: 5; }
+ul.cloud a[data-weight="6"] { --size: 6; }
+ul.cloud a[data-weight="7"] { --size: 7; }
+ul.cloud a[data-weight="8"] { --size: 8; }
+ul.cloud a[data-weight="9"] { --size: 9; }
+ul.cloud a[data-weight="10"] { --size: 10; }
+ul.cloud a[data-weight="11"] { --size: 11; }
+ul.cloud a[data-weight="12"] { --size: 12; }
+ul.cloud a[data-weight="13"] { --size: 13; }
+ul.cloud a[data-weight="14"] { --size: 14; }
+ul.cloud a[data-weight="15"] { --size: 15; }
+ul.cloud a[data-weight="16"] { --size: 16; }
+ul.cloud a:focus {
+  outline: 5px dashed;
+}
+ul.cloud a:hover {
+  text-decoration: underline;
+}
+ul.cloud a:focus::before,
+ul.cloud a:hover::before {
+  width: 100%;
+}
+@media (prefers-reduced-motion) {
+  ul.cloud * {
+    transition: none !important;
+  }
+}
+/* Separator */
+.separator {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-top: 1px solid $grey-color;
+  opacity: 0.25;
+}
+
+/* License */
+.license-link {
+  color: $grey-color;
+}
+
+/* Code block */
+.highlight > button {
+  opacity: 0;
+  float: right;
+  position: relative;
+}
+.highlight:hover > button {
+  opacity: 1;
+}
+.highlight > button:active,
+.highlight > button:focus {
+  opacity: 1;
+}
+
+/* Card */
+.card {
+  box-shadow: 0 0px 4px 0 rgba(0,0,0,0.25);
+  width: 100%;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 255);
+  margin: 15px 0px;
+}
+.card_content {
+  padding: 10px;
+}
+
+/* ----------------------------------- */
+@include media-query($on-palm) {
+  .row-profile {
+    display: block;
+    padding-bottom: 0px;
+  }
+  .col-profile-image {
+    text-align: center;
+    padding: 0px;
+  }
+  .col-profile-title {
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .avatar {  
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .col-profile-image {
+    width: auto;
+  }
+  .col-profile-title {
+    width: auto;
+  }
+
+  .social_conteiner {
+    text-align: center;
+    line-height: 1.75;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .social_link {
+    padding-right: 10px;
+  }
+
+  ul.cloud {
+    line-height: 1.50rem;
+    width: 85%;
+  }
+  ul.cloud a {
+    /*   
+    Not supported by any browser at the moment :(
+    --size: attr(data-weight number); 
+    */
+    --size: 2;
+    font-size: calc(var(--size) * 0.5rem + 0.45rem);
+    /* 
+    For different tones of a single color
+    opacity: calc((15 - (9 - var(--size))) / 15); 
+    */
+  }
+}
+
+/* ------------------------------------------ */
+html[data-theme="dark"]  {
+  ol.bibliography a {
+    color: $dark-text-color;
+  }
+  ol.bibliography .ai-acmdl:hover {
+    color: #64873D;
+  }
+  .social_link {
+    color: $grey-color;
+  }
+
+  .card {
+    box-shadow: 0 0px 3px 0 rgba(255,255,255,0.5);
+    background: rgba(50, 50, 50, 255);
+  }
+}

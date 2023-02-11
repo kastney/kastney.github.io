@@ -7,7 +7,7 @@ title: '@kastney'
 language: pt
 
 # Fav Icon settings
-favicon: "/assets/images/favicon.png"
+favicon: '/assets/images/favicon.png'
 
 # Collections settings
 collections_dir: _collections
@@ -29,5 +29,14 @@ pagination:
   sort_reverse: true
 
 # Build settings
+markdown: kramdown
+kmarkdown:
+  input: GFM
+
+# Pluging settings
 plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-spaceship
   - jekyll-paginate-v2
