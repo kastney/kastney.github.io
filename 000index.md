@@ -3,7 +3,6 @@ layout: default
 title: page.index.title
 subtitles: [
     page.index.subtitles.one,
-    page.index.subtitles.two,
     page.index.subtitles.three,
     page.index.subtitles.four,
     page.index.subtitles.five,
