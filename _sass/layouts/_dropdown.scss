@@ -1,76 +1,129 @@
+/* Estilos principais do componente dropdown */
 .dropdown {
-    position: relative; /* Posiciona o dropdown relativamente ao seu contêiner pai */
-    width: 100%; /* Define a largura do dropdown para 100% da largura do contêiner pai */
-    margin: 0 auto; /* Centraliza o dropdown horizontalmente */
+    /* Posiciona o dropdown relativamente ao seu contêiner pai */
+    position: relative;
+    /* Define a largura do dropdown para 100% da largura do contêiner pai */
+    width: 100%;
+    /* Centraliza o dropdown horizontalmente */
+    margin: 0 auto;
 
+    /* Estilos do botão principal do dropdown */
     .dropdown-button {
-        display: flex; /* Usa Flexbox para alinhar itens dentro do botão */
-        background-color: $card-solid-light; /* Define a cor de fundo do botão */
-        width: 100%; /* Define a largura do botão para 100% do contêiner pai */
-        padding: 10px; /* Adiciona 10px de preenchimento interno em todos os lados do botão */
-        font-size: 16px; /* Define o tamanho da fonte para 16px */
-        box-shadow: $box-shadow; /* Adiciona uma sombra sutil ao botão */
-        border: none; /* Remove a borda do botão */
-        border-radius: 8px; /* Adiciona bordas arredondadas com raio de 8px */
-        cursor: pointer; /* Muda o cursor para uma mão quando passa sobre o botão */
-        align-items: center; /* Alinha os itens no centro verticalmente */
-        justify-content: space-between; /* Cria um espaço igual entre a bandeira+texto e a seta */
-        position: relative; /* Define a posição do botão como relativa para posicionar o dropdown */
+        /* Usa Flexbox para alinhar itens dentro do botão */
+        display: flex;
+        /* Define a cor de fundo do botão */
+        background-color: $card-solid-light;
+        /* Define a largura do botão para 100% do contêiner pai */
+        width: 100%;
+        /* Adiciona 10px de preenchimento interno em todos os lados do botão */
+        padding: 10px;
+        /* Define o tamanho da fonte para 16px */
+        font-size: 16px;
+        /* Adiciona uma sombra sutil ao botão */
+        box-shadow: $box-shadow;
+        /* Remove a borda do botão */
+        border: none;
+        /* Adiciona bordas arredondadas com raio de 8px */
+        border-radius: 8px;
+        /* Muda o cursor para uma mão quando passa sobre o botão */
+        cursor: pointer;
+        /* Alinha os itens no centro verticalmente */
+        align-items: center;
+        /* Cria um espaço igual entre a bandeira+texto e a seta */
+        justify-content: space-between;
+        /* Define a posição do botão como relativa para posicionar o dropdown */
+        position: relative;
 
+        /* Estilos aplicados ao span dentro do botão (geralmente bandeira + código do idioma) */
         span {
-            margin-right: 10px; /* Adiciona 10px de margem à direita do span (bandeira) */
+            /* Adiciona 10px de margem à direita do span (bandeira) */
+            margin-right: 10px;
         }
 
+        /* Estilos aplicados aos ícones de bandeiras */
         .fi {
-            margin-left: 10px; /* Adiciona 10px de margem à esquerda dos ícones de bandeira */
+            /* Adiciona 10px de margem à esquerda dos ícones de bandeira */
+            margin-left: 10px;
         }
 
+        /* Estilos aplicados ao ícone da seta */
         i {
-            margin-left: auto; /* Empurra a seta para o extremo direito do botão */
-            transform: rotate(0deg); /* Define a rotação inicial da seta para 0 graus (virada para baixo) */
-            transition: transform 0.3s ease; /* Aplica uma transição suave de 0.3 segundos na rotação da seta */
+            /* Empurra a seta para o extremo direito do botão */
+            margin-left: auto;
+            /* Define a rotação inicial da seta para 0 graus (virada para baixo) */
+            transform: rotate(0deg);
+            /* Aplica uma transição suave de 0.3 segundos na rotação da seta */
+            transition: transform 0.3s ease;
         }
     }
 
+    /* Estilos do conteúdo do dropdown */
     .dropdown-content {
-        display: none; /* Oculta o conteúdo do dropdown por padrão */
-        position: absolute; /* Posiciona o conteúdo do dropdown absolutamente em relação ao botão */
-        background-color: $card-solid-light; /* Define a cor de fundo do conteúdo do dropdown */
-        border: 1px solid #00000030; /* Adiciona uma borda ao conteúdo do dropdown */
-        z-index: 2; /* Garante que o conteúdo do dropdown fique acima de outros elementos */
-        max-height: 130px; /* Define uma altura máxima para o dropdown para adicionar rolagem se necessário */
-        overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura máxima */
-        width: calc(100% - 10px); /* Define a largura do conteúdo do dropdown, reduzida em 10px das bordas */
-        margin: 0 5px; /* Adiciona 5px de margem à esquerda e à direita do conteúdo do dropdown */
+        /* Oculta o conteúdo do dropdown por padrão */
+        display: none;
+        /* Posiciona o conteúdo do dropdown absolutamente em relação ao botão */
+        position: absolute;
+        /* Define a cor de fundo do conteúdo do dropdown */
+        background-color: $card-solid-light;
+        /* Adiciona uma borda ao conteúdo do dropdown */
+        border: 1px solid #00000030;
+        /* Garante que o conteúdo do dropdown fique acima de outros elementos */
+        z-index: 2;
+        /* Define uma altura máxima para o dropdown para adicionar rolagem se necessário */
+        max-height: 130px;
+        /* Adiciona rolagem vertical se o conteúdo exceder a altura máxima */
+        overflow-y: auto;
+        /* Define a largura do conteúdo do dropdown, reduzida em 10px das bordas */
+        width: calc(100% - 10px);
+        /* Adiciona 5px de margem à esquerda e à direita do conteúdo do dropdown */
+        margin: 0 5px;
 
+        /* Estilos aplicados aos itens clicáveis dentro do dropdown */
         a, .current-language {
+            /* Adiciona 10px de espaçamento vertical nos itens do dropdown */
             padding: 10px 0;
+            /* Remove sublinhado dos links */
             text-decoration: none;
+            /* Usa flexbox para alinhar itens internamente */
             display: flex;
+            /* Centraliza o conteúdo dos itens verticalmente */
             align-items: center;
+            /* Define o tamanho da fonte dos itens */
             font-size: 16px;
+            /* Define a cor do texto dos itens */
             color: #353535;
+            /* Muda o cursor para ponteiro ao passar sobre o item */
             cursor: pointer;
 
+            /* Estilos aplicados ao span dentro de cada item */
             span {
+                 /* Adiciona 10px de margem à direita do texto */
                 margin-right: 10px;
             }
 
+            /* Estilos aplicados aos ícones de bandeiras dentro dos itens */
             .fi {
+                 /* Adiciona 16px de margem à esquerda dos ícones */
                 margin-left: 16px;
             }
         }
 
+        /* Estilos aplicados quando o usuário passa o mouse sobre um item do dropdown */
         a:hover, .current-language:hover {
+            /* Aplica a cor de fundo de hover definida no tema */
             background-color: $card-hover-light;
         }
     }
 }
 
+/* Estilos aplicados quando o dropdown está ativo — gira a seta para cima */
 .dropdown.active .dropdown-button i {
-    transform: rotate(180deg); /* Gira a seta para cima (180 graus) quando o dropdown está ativo */
+    /* Gira a seta para cima (180 graus) quando o dropdown está ativo */
+    transform: rotate(180deg);
 }
 
+/* Estilos aplicados quando o dropdown está ativo — mostra o conteúdo */
 .dropdown.active .dropdown-content {
-    display: block; /* Mostra o conteúdo do dropdown quando a classe active é aplicada */
+    /* Mostra o conteúdo do dropdown quando a classe active é aplicada */
+    display: block;
 }

@@ -1,69 +1,104 @@
 @charset "utf-8";
 
-/* Cores gerais do site */
+/* Cor de texto usada em cartões transparentes */
 $card-transparent-text: #fefefe !default;
-$frosted-glass-effect: blur(7px) !default;
+/* Intensidade do efeito fosco aplicado a elementos */
+$frosted-glass-effect: blur(4px) !default;
+/* Sombra padrão aplicada a elementos elevados */
 $box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !default;
 
-/* Cores do tema claro */
+/* Cor de fundo geral do site em tema claro */
 $background-color-light: #dcdcdc !default;
+/* Cor de fundo translúcida para cartões */
 $card-light: rgba(255, 255, 255, 0.7) !default;
+/* Cor de fundo quando o cartão está em hover */
 $card-hover-light: #ececec !default;
+/* Cor sólida usada em cartões */
 $card-solid-light: #f5f5f5 !default;
+/* Cor padrão do texto em cartões no tema claro */
 $card-text-light: #353535 !default;
 
-/* Parâmetros gerais do site */
+/* Largura máxima para conteúdo centralizado */
 $max-width-content: 1080px !default;
 
-
-
-
+/* Reset e configurações básicas de elementos */
 * {
+    /* Remove margens padrão dos navegadores */
     margin: 0;
+    /* Remove espaçamentos internos padrão */
     padding: 0;
+    /* Garante que larguras e alturas incluam bordas e padding */
     box-sizing: border-box;
+    /* Define a fonte padrão usada em todo o site */
     font-family: "Poppins", sans-serif;
 }
 
+/* Estilos gerais do corpo da página */
 body {
+    /* Define a cor padrão do texto no corpo */
     color: $card-text-light;
+    /* Define a cor de fundo do site */
     background-color: $background-color-light;
     
+    /* Impede seleção de texto em navegadores modernos */
     user-select: none;
+    /* Impede seleção de texto no Chrome/Safari */
     -webkit-user-select: none;
+    /* Impede seleção de texto no Firefox */
     -moz-user-select: none;
+    /* Impede seleção de texto no Internet Explorer/Edge antigo */
     -ms-user-select: none;
 }
 
+/* Estilização padrão para títulos h2 */
 h2 {
+    /* Define o tamanho da fonte do título */
     font-size: x-large;
+    /* Aplica espaçamento superior e inferior ao título */
     padding: 40px 0 20px 0;
 }
 
+/* Tratamento padrão para imagens */
 img {
+    /* Evita que imagens recebam eventos de clique ou arrasto */
     pointer-events: none;
+    /* Impede arrastar imagens no navegador */
     user-drag: none;
+    /* Impede arrastar imagens no WebKit (Chrome/Safari) */
     -webkit-user-drag: none;
 }
 
+/* Área principal de conteúdo do site */
 .content {
+    /* A largura ocupa sempre 100% da tela */
     width: 100%;
+    /* Limita a largura máxima da área de conteúdo */
     max-width: $max-width-content;
+    /* Espaçamento interno nas laterais e topo */
     padding: 40px 20px;
+    /* Centraliza horizontalmente o conteúdo */
     margin: auto;
 
+    /* Estilos aplicados aos parágrafos diretos dentro de .content */
     &>p {
+        /* Espaçamento superior e inferior entre os parágrafos */
         margin: 20px 0;
+        /* Alinha o texto de forma justificada */
         text-align: justify;
+        /* Avanço de parágrafo na primeira linha */
         text-indent: 2em;
     }
 }
 
+/* Importação de layouts específicos do site */
 @import
-    "layouts/header", /* Importa estilos do arquivo "header" */
-    "layouts/banner", /* Importa estilos do arquivo "banner" */
-    "layouts/click-to-top", /* Importa estilos do arquivo "click-to-top" */
-    "layouts/dropdown", /* Importa estilos do arquivo "dropdown" */
-    "layouts/footer", /* Importa estilos do arquivo "footer" */
-    "layouts/layout", /* Importa estilos do arquivo "layout" */
-    "layouts/card" /* Importa estilos do arquivo "card" */;
+    /* Importa estilos do arquivo "header" */    
+    "layouts/header",
+    /* Importa estilos do arquivo "banner" */
+    "layouts/banner",
+    /* Importa estilos do arquivo "click-to-top" */
+    "layouts/click-to-top",
+    /* Importa estilos do arquivo "dropdown" */
+    "layouts/dropdown",
+    /* Importa estilos do arquivo "footer" */
+    "layouts/footer";

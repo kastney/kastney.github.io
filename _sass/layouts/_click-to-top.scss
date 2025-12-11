@@ -1,34 +1,59 @@
+/* Estilos principais do botão flutuante "voltar ao topo" */
 .click-to-top {
-    display: flex; /* Usa flexbox para alinhar o conteúdo */
-    z-index: 3; /* Garante que o botão esteja acima de outros elementos */
-    width: 64px; /* Define a largura do botão */
-    height: 64px; /* Define a altura do botão */
-    border-radius: 32px; /* Define as bordas arredondadas do botão */
-    background: $card-light; /* Define a cor de fundo do botão */
-    backdrop-filter: $frosted-glass-effect; /* Aplica efeito de vidro fosco */
-    box-shadow: $box-shadow; /* Adiciona uma sombra suave ao botão */
-    position: fixed; /* Fixa a posição do botão na tela */
-    right: 60px; /* Alinha o botão 60px à direita da tela */
-    bottom: 35px; /* Alinha o botão 35px acima da borda inferior da tela */
-    align-items: center; /* Centraliza o conteúdo verticalmente no botão */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente no botão */
-    font-size: 24px; /* Define o tamanho da fonte (ícone) dentro do botão */
-    transition: opacity 0.5s ease, background-color 0.5s ease; /* Transição suave para opacidade e cor de fundo */
-    cursor: pointer; /* Altera o cursor para ponteiro ao passar sobre o botão */
-    opacity: 1; /* O botão é visível por padrão */
+    /* Usa flexbox para alinhar o conteúdo */
+    display: flex;
+    /* Garante que o botão esteja acima de outros elementos */
+    z-index: 3;
+    /* Define a largura do botão */
+    width: 64px;
+    /* Define a altura do botão */
+    height: 64px;
+    /* Define as bordas arredondadas do botão */
+    border-radius: 32px;
+    /* Define a cor de fundo do botão */
+    background: $card-light;
+    /* Aplica efeito de vidro fosco */
+    backdrop-filter: $frosted-glass-effect;
+    /* Adiciona uma sombra suave ao botão */
+    box-shadow: $box-shadow;
+    /* Fixa a posição do botão na tela */
+    position: fixed;
+    /* Alinha o botão na margem direita da tela */
+    right: 20px;
+    /* Alinha o botão na margem inferior da tela */
+    bottom: 50px;
+    /* Centraliza o conteúdo verticalmente no botão */
+    align-items: center;
+    /* Centraliza o conteúdo horizontalmente no botão */
+    justify-content: center;
+    /* Define o tamanho da fonte (ícone) dentro do botão */
+    font-size: 24px;
+    /* Transição suave para opacidade e cor de fundo */
+    transition: opacity 0.5s ease, background-color 0.5s ease;
+    /* Altera o cursor para ponteiro ao passar sobre o botão */
+    cursor: pointer;
+    /* O botão é visível por padrão */
+    opacity: 1;
 
+    /* Estilos aplicados ao ícone dentro do botão */
     i {
-        transition: color 0.5s ease; /* Transição suave na mudança de cor do ícone */
+        /* Transição suave na mudança de cor do ícone */
+        transition: color 0.5s ease;
     }
 
     /* Quando o scroll está no topo da página */
     html[scroll-status='top'] & {
-        background-color: transparent; /* Torna o fundo do botão transparente */
-        opacity: 0; /* Torna o botão invisível suavemente */
-        pointer-events: none; /* Desativa interações enquanto o botão está invisível */
+        /* Torna o fundo do botão transparente */
+        background-color: transparent;
+        /* Torna o botão invisível suavemente */
+        opacity: 0;
+        /* Desativa interações enquanto o botão está invisível */
+        pointer-events: none;
 
+        /* Ajustes no ícone quando o botão está oculto */
         i {
-            color: transparent; /* Torna o ícone invisível junto com o botão */
+            /* Torna o ícone invisível junto com o botão */
+            color: transparent;
         }
     }
 }

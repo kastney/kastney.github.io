@@ -1,103 +1,159 @@
+/* Estilos principais do cabeçalho fixo da página */
 header {
+    /* Define o espaçamento interno do cabeçalho */
     padding: 20px;
+    /* Faz o cabeçalho ocupar toda a largura da tela */
     width: 100%;
-    top: 0;
-    left: 0;
+    /* Mantém o cabeçalho fixo no topo da página */
     position: fixed;
+    /* Define um nível alto na pilha de elementos para garantir que o cabeçalho fique por cima */
     z-index: 5;
-    font-weight: 450;
+    /* Adiciona transições suaves para opacidade, desfoque e cor de fundo */
     transition: opacity 0.5s ease, backdrop-filter 0.5s ease, background-color 0.5s ease;
 
+    /* Estilos para o contêiner interno do cabeçalho */
     div {
+        /* Define o layout usando flexbox */
         display: flex;
+        /* Distribui os elementos internos nas extremidades */
         justify-content: space-between;
-        align-items: center;
     }
 
+    /* Estilos para todos os links dentro do cabeçalho */
     a {
+        /* Remove qualquer sublinhado dos links */
         text-decoration: none;
+        /* Aplica transição suave na mudança de cor do link */
         transition: color 0.5s ease;
     }
 
+    /* Estilos aplicados quando o atributo banner="true" está presente */
     &[banner='true'] {
+        /* Deixa o fundo completamente transparente */
         background-color: transparent;
+        /* Remove o efeito de desfoque */
         backdrop-filter: none;
+        /* Remove qualquer sombra do cabeçalho */
         box-shadow: none;
+        /* Deixa o cabeçalho totalmente visível */
         opacity: 1;
+        /* Permite interações com o cabeçalho */
         pointer-events: all;
 
+        /* Estilo dos links quando o cabeçalho está no modo banner */
         a {
+            /* Define a cor dos links baseada na variável do cartão transparente */
             color: $card-transparent-text;
         }
 
+        /* Estilos aplicados quando a página está no topo do scroll */
         html[scroll-status='top'] & {
+            /* Mantém o fundo transparente */
             background-color: transparent;
+            /* Remove o desfoque */
             backdrop-filter: none;
+            /* Remove qualquer sombra */
             box-shadow: none;
         }
 
+        /* Estilos aplicados quando o usuário está rolando para baixo */
         html[scroll-status='down'] & {
+            /* Faz o cabeçalho desaparecer */
             opacity: 0;
+            /* Desativa interações, evitando cliques */
             pointer-events: none;
 
+            /* Estilos dos links nesse estado */
             a {
+                /* Torna os links invisíveis */
                 color: transparent;
             }
         }
 
-        html[scroll-status='up'] &,
-        html[scroll-status='bottom'] & {
+        /* Estilos aplicados quando o scroll está subindo ou chegou ao final da página */
+        html[scroll-status='up'] &, html[scroll-status='bottom'] & {
+            /* Deixa o cabeçalho visível */
             opacity: 1;
+            /* Ativa interações novamente */
             pointer-events: all;
+            /* Aplica uma cor de fundo sólida */
             background-color: $card-light;
+            /* Adiciona o efeito de vidro fosco */
             backdrop-filter: $frosted-glass-effect;
+            /* Habilita a sombra do cabeçalho */
             box-shadow: $box-shadow;
 
+            /* Ajuste da cor dos links nesses estados */
             a {
+                /* Define a cor dos links */
                 color: $card-text-light;
             }
         }
     }
 
+    /* Estilos aplicados quando o atributo banner="false" está presente */
     &[banner='false'] {
+        /* Aplica cor de fundo sólida ao cabeçalho */
         background-color: $card-light;
+        /* Ativa o efeito de vidro fosco */
         backdrop-filter: $frosted-glass-effect;
+        /* Aplica sombra ao cabeçalho */
         box-shadow: $box-shadow;
+        /* Deixa o cabeçalho visível */
         opacity: 1;
+        /* Ativa interações com o elemento */
         pointer-events: all;
 
+        /* Estilos dos links no modo normal */
         a {
+            /* Define a cor do texto dos links */
             color: $card-text-light;
         }
 
+        /* Estilos aplicados ao rolar para baixo */
         html[scroll-status='down'] & {
+            /* Oculta o cabeçalho durante a rolagem para baixo */
             opacity: 0;
+            /* Impede qualquer interação com o cabeçalho */
             pointer-events: none;
 
+            /* Ajuste dos links neste estado */
             a {
+                /* Torna o texto transparente */
                 color: transparent;
             }
         }
 
-        html[scroll-status='up'] &,
-        html[scroll-status='bottom'] & {
+        /* Estilos aplicados ao rolar para cima ou quando está no final da página */
+        html[scroll-status='up'] &, html[scroll-status='bottom'] & {
+            /* Torna o cabeçalho visível novamente */
             opacity: 1;
+            /* Permite interações novamente */
             pointer-events: all;
         }
     }
 
+    /* Estilos específicos do menu do cabeçalho */
     .header-menu {
+        /* Estilos quando o mouse passa sobre um link do menu */
         a:hover {
+            /* Aplica sublinhado ao link */
             text-decoration: underline;
         }
 
+        /* Estilos aplicados à lista do menu */
         ul {
+            /* Remove os marcadores padrão da lista */
             list-style-type: none;
+            /* Alinha os itens da lista à direita */
             text-align: right;
         }
 
+        /* Estilos aplicados a cada item da lista */
         li {
+            /* Exibe os itens lado a lado */
             display: inline-block;
+            /* Define espaçamento horizontal entre os itens */
             margin: 0 10px;
         }
     }
