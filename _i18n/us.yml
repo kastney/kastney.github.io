@@ -9,40 +9,34 @@ banner:
   click_to_more: "Scroll down to know more"
 footer:
   experience: "You are accessing the experience:"
-certificate:
-  tags:
-    course: "course"
-    project: "project"
-    webinar: "webinar"
-    bootcamp: "bootcamp"
 page:
   index:
     title: "Home"
     subtitles:
       one: "I'm a Software Engineer"
-      two: "I'm a Tech Content Creator"
-      three: "I'm Studying Cloud Computing"
-      four: "I'm Fascinated by Astronomy"
-      five: "I'm an Animal Lover"
-      six: "I'm Passionate About Music"
-      seven: "I'm a Gaming Enthusiast"
-      eight: "I'm a Fan of Motorsport"
-  blog:
-    title: "Blog"
-    banner:
-      title: "My blog"
-    subtitle: "I share things I learn"
-  games:
-    title: "Games"
-    banner:
-      title: "My Games"
-    subtitle: "My Digital Games Portfolio"
-  investigation:
-    title: "Digital Investigation"
-    title_header: "Investigation"
-    banner:
-      title: "Digital Investigation"
-    subtitle: "Hire Digital Investigation services"
-  certificates:
-    title: "Certificates"
-    section_certificates: "My certificates"
+      two: "I'm Fascinated by Astronomy"
+      three: "I'm from the Pathfinder Club"
+    sections:
+      lifestyle:
+        title: "Lifestyle"
+        subtitle: "Where experiences, values, and purpose come together"
+  pathfinders:
+    title: "Pathfinders"
+    title_menu: "PF"
+    subtitle: "My journey in the Pathfinders world"
+    sections:
+      experiences:
+        title: "Experiences"
+        subtitle: "Series of stories, memories, and lived moments in the Pathfinder Club"
+      foundation:
+        title: "Foundation"
+        subtitle: "Themed series focused on study, practice, and ongoing learning"
+  messenger:
+    title: "Messenger: Between Trails and Neckerchiefs"
+    subtitle: "A journey that begins again among trails, neckerchiefs, and personal growth"
+  books:
+    title: "Livros..."
+    subtitle: "Livros..."
+  specialties:
+    title: "Especialidades..."
+    subtitle: "Especialidades..."

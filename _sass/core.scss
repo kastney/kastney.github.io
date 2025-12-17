@@ -75,7 +75,7 @@ img {
     /* Limita a largura máxima da área de conteúdo */
     max-width: $max-width-content;
     /* Espaçamento interno nas laterais e topo */
-    padding: 40px 20px;
+    padding: 20px;
     /* Centraliza horizontalmente o conteúdo */
     margin: auto;
 
@@ -101,4 +101,6 @@ img {
     /* Importa estilos do arquivo "dropdown" */
     "layouts/dropdown",
     /* Importa estilos do arquivo "footer" */
-    "layouts/footer";
+    "layouts/footer",
+    /* Importa estilos do arquivo "container" */
+    "layouts/container";

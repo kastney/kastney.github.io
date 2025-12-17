@@ -1,0 +1,12 @@
+<section class="section-card">
+  {%- assign title = include.title -%}
+  {%- if title and title != "" -%}
+    <h2>{{ title }}</h2>
+  {%- endif -%}
+
+  {%- assign subtitle = include.subtitle -%}
+  {%- if subtitle and subtitle != "" -%}
+    <p>{{ subtitle }}</p>
+  {%- endif -%}
+
+  <div class="section-card-layout">

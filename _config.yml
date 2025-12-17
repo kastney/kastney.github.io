@@ -11,9 +11,17 @@ exclude_from_localizations: [ "assets" ]
 # Collections settings
 collections_dir: _collections
 collections:
-  certificates_br:
+  messenger_br:
     output: true
-  certificates_us:
+  messenger_us:
+    output: true
+  books_br:
+    output: true
+  books_us:
+    output: true
+  specialties_br:
+    output: true
+  specialties_us:
     output: true
 
 # Markdown settings
