@@ -10,11 +10,13 @@
     transition: .3s;
 
     /* Estilos da imagem de fundo do banner */
-    .background-image {
+    .background-media {
         /* Posiciona a imagem de forma absoluta em relação ao banner */
         position: absolute;
         /* Garante que a imagem fique abaixo do conteúdo */
-        z-index: 1;
+        z-index: 0;
+        /* Utilizado para evitar bugs no navegador Safari */
+        display: block;
         /* Define a altura da imagem para 100% da altura da seção */
         height: 100%;
         /* Define a largura da imagem para 100% da largura da seção */
@@ -23,6 +25,10 @@
         object-fit: cover;
         /* Centraliza a imagem dentro do contêiner */
         object-position: center;
+        /* Remove qualquer borda ou outline */
+        border: none;
+        /* Remove a possibilidade de qualquer interação acidental nas mídias */
+        pointer-events: none;
     }
 
     /* Área que contém o conteúdo principal do banner */
@@ -30,7 +36,7 @@
         /* Define a posição relativa para que o z-index funcione corretamente */
         position: relative;
         /* Garante que o conteúdo esteja acima da imagem de fundo */
-        z-index: 2;
+        z-index: 3;
         /* Usa flexbox para o layout */
         display: flex;
         /* Alinha os itens em coluna */
@@ -84,7 +90,7 @@
         /* Fixa a posição do botão na tela */
         position: fixed;
         /* Garante que o botão esteja acima de outros elementos */
-        z-index: 3;
+        z-index: 4;
         /* Posiciona o botão à direita do centro da tela */
         right: 50%;
         /* Posiciona o botão 5 pixels acima da borda inferior da tela */
@@ -106,7 +112,22 @@
             transition: .3s;
         }
     }
+
+    /* Pseudo-elemento usado como camada de overlay sobre o banner */
+    &::before {
+        /* Cria um pseudo-elemento vazio apenas para fins visuais */
+        content: "";
+        /* Posiciona o overlay de forma absoluta em relação ao banner */
+        position: absolute;
+        /* Faz o overlay ocupar toda a área do banner (top, right, bottom, left = 0) */
+        inset: 0;
+        /* Garante que o overlay fique acima da imagem/vídeo e abaixo do conteúdo */
+        z-index: 2;
+        /* Aplica um fundo preto semitransparente para melhorar o contraste do texto */
+        background: rgba(0, 0, 0, 0.35);
+    }
 }
+
 
 /* Estilos aplicados quando o HTML não está no topo do scroll */
 html:not([scroll-status='top']) {
@@ -138,5 +159,14 @@ html:not([scroll-status='top']) {
     50% {
         /* Define a posição intermediária da animação para criar o efeito de pulo */
         transform: translate(50%, -10px);
+    }
+}
+
+/* Reduzir animação para quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    /* Estilos do botão "Click to More" que fica fixado no rodapé */
+    .click-to-more {
+        /* Desativa a animação */
+        animation: none;
     }
 }

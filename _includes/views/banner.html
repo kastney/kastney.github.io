@@ -1,10 +1,28 @@
 {%- if page.banner -%}
     <section class="banner">
-        {%- if page.banner.video -%}
-            Banner com vídeo
-        {%- else if page.banner.image -%}
-            <!-- Imagem de Fundo do Banner -->
-            <img class="background-image" src="{{page.banner.image}}" alt="Banner" oncontextmenu="return false;"/>
+        {%- if page.banner.video or page.banner.image -%}
+            {%- if page.banner.video -%}
+                <!-- Vídeo de Fundo do Banner -->
+                 <video class="background-media"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                        {%- if page.banner.image -%}
+                            poster="{{ page.banner.image }}"
+                        {%- endif -%}
+                        oncontextmenu="return false;">
+                    <source src="{{ page.banner.video }}" type="video/mp4">
+                </video>
+            {%- elsif page.banner.image -%}
+                <!-- Imagem de Fundo do Banner -->
+                <img class="background-media"
+                     src="{{ page.banner.image }}"
+                     alt="Banner"
+                     oncontextmenu="return false;" />
+            {%- endif -%}
+
             <!-- Conteúdo do Banner -->
             <div class="banner-content">
                 <!-- Banner Title -->
