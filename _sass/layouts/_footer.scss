@@ -1,14 +1,23 @@
+/* Estilos gerais do rodapé do site */
 footer {
+    /* Define a cor de fundo clara do rodapé */
     background-color: $background-color-light;
+    /* Define o tamanho base da fonte usada no rodapé */
     font-size: 12px;
 
+    /* Estilos específicos para a área de seleção de idioma */
     .language p {
+        /* Define espaçamento interno inferior e à esquerda para o texto do idioma */
         padding: 0 0 5px 10px;
     }
 
+    /* Seção de direitos autorais exibida no final do rodapé */
     .copyright {
+        /* Define o espaçamento interno superior, inferior e remove espaçamentos laterais */
         padding: 60px 0 20px 0;
+        /* Define um tamanho de fonte menor para o aviso de direitos autorais */
         font-size: 10px;
+        /* Centraliza horizontalmente o texto de direitos autorais */
         text-align: center;
     }
 }

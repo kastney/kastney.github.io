@@ -1,0 +1,160 @@
+/* Seção de cartões */
+.section-card {
+    /* Ajustes específicos para títulos dentro da seção */
+    h2 {
+        /* Ajustes específicos para títulos dentro da seção */
+        padding-bottom: 0;
+    }
+
+    /* Ajustes globais de parágrafo dentro da seção */
+    p {
+        /* Ajustes globais de parágrafo dentro da seção */
+        font-size: 0.8em;
+        /* Ajustes globais de parágrafo dentro da seção */
+        text-indent: 0;
+    }
+
+    /* Layout que organiza os cartões em grid responsivo */
+    .section-card-layout {
+        /* Layout que organiza os cartões em grid responsivo */
+        margin-top: 20px;
+        /* Usa CSS Grid para organização dos cards */
+        display: grid;
+        /* Usa CSS Grid para organização dos cards */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        /* Usa CSS Grid para organização dos cards */
+        gap: 1.5rem;
+    }
+}
+
+/* Base para o cartão */
+.card {
+     /* Permite posicionamento absoluto dos elementos internos */
+	position: relative;
+    /* Estrutura flexível para empilhar conteúdo verticalmente */
+	display: flex;
+     /* Define o eixo principal como vertical */
+	flex-direction: column;
+    /* Cor de fundo de fallback (caso a imagem não carregue) */
+	background: #9e9e9e;
+     /* Altura fixa do cartão */
+	height: 260px;
+     /* Bordas arredondadas para efeito visual moderno */
+	border-radius: 15px;
+     /* Bordas arredondadas para efeito visual moderno */
+	overflow: hidden;
+    /* Garante que nada ultrapasse os limites do card */
+	text-decoration: none;
+    /* Sombra para dar profundidade ao cartão */
+	box-shadow: $box-shadow;
+
+    /* Imagem do cartão */
+	.card-image {
+        /* Ocupa toda a largura do card */
+		width: 100%;
+        /* Ocupa toda a altura do card */
+		height: 100%;
+        /* Esconde qualquer excesso da imagem */
+		overflow: hidden;
+
+        /* Estilização da imagem */
+		img {
+            /* Garante que a imagem ocupe toda a área disponível */
+			width: 100%;
+            /* Garante altura total */
+			height: 100%;
+            /* Mantém proporção e corta o excesso de forma elegante */
+			object-fit: cover;
+            /* Remove espaços indesejados causados por inline elements */
+			display: block;
+		}
+	}
+
+    /* Camada do efeito de vidro */
+	.card-glass {
+        /* Posiciona o vidro sobre a imagem */
+		position: absolute;
+        /* Fixa o vidro na parte inferior do card */
+		inset: auto 0 0 0;
+        /* Garante que fique acima da imagem */
+		z-index: 1;
+        /* Espaçamento interno do conteúdo */
+		padding: 2rem 1.1rem 1rem 1.1rem;
+        /* Cor do texto sobre o vidro */
+		color: $card-transparent-text;
+		/* Fundo transparente para permitir controle via pseudo-elemento */
+		background: transparent;
+        /* Evita vazamento visual do pseudo-elemento */
+		overflow: hidden;
+
+		/* Camada do vidro */
+		&::before {
+            /* Necessário para exibir o pseudo-elemento */
+			content: "";
+            /* Posiciona exatamente sobre a área do glass */
+			position: absolute;
+            /* Ocupa toda a área do card-glass */
+			inset: 0;
+            /* Fica abaixo do texto */
+			z-index: 1;
+            /* Cor base escura semi-transparente */
+			background: #00000040;
+            /* Aplica o efeito de desfoque (glassmorphism) */
+			backdrop-filter: $frosted-glass-effect;
+            /* Suporte para navegadores WebKit (Safari) */
+			-webkit-backdrop-filter: $frosted-glass-effect;
+
+			/* Máscara de gradiente */
+			mask-image: linear-gradient(
+                /* Direção do gradiente: começa de baixo para cima */
+				to top,
+                /* Região inferior: efeito totalmente visível */
+				rgba(0, 0, 0, 1) 0%,
+                /* Mantém o efeito completo até o texto do conteúdo existir */
+				rgba(0, 0, 0, 1) 60%,
+                /* Início da transição: o efeito começa a desaparecer */
+				rgba(0, 0, 0, 0.5) 80%,
+                /* Região superior: efeito completamente removido */
+				rgba(0, 0, 0, 0) 100%
+			);
+
+            /* Versão compatível com WebKit */
+			-webkit-mask-image: linear-gradient(
+                /* Direção do gradiente: começa de baixo para cima */
+				to top,
+                /* Região inferior: efeito totalmente visível */
+				rgba(0, 0, 0, 1) 0%,
+                /* Mantém o efeito completo até o texto do conteúdo existir */
+				rgba(0, 0, 0, 1) 60%,
+                /* Início da transição: o efeito começa a desaparecer */
+				rgba(0, 0, 0, 0.5) 80%,
+                /* Região superior: efeito completamente removido */
+				rgba(0, 0, 0, 0) 100%
+			);
+		}
+
+        /* Conteúdo do cartão */
+        h3,	p {
+            /* Garante que o texto fique acima do vidro */
+			position: relative;
+            /* Coloca o texto acima do pseudo-elemento */
+			z-index: 2;
+		}
+
+        /* Título do card */
+		h3 {
+            /* Tamanho de fonte do título */
+			font-size: 1.1rem;
+            /* Peso maior para destaque */
+			font-weight: 600;
+		}
+
+        /* Descrição do card */
+		p {
+            /* Fonte menor para texto auxiliar */
+			font-size: 0.8rem;
+            /* Altura de linha confortável para leitura */
+			line-height: 1.45;
+		}
+	}
+}

@@ -1,87 +1,142 @@
+/* Estilos da seção principal de banner */
 .banner {
-    position: relative; /* Define a posição relativa para que os elementos internos possam ser posicionados em relação a ela */
-    color: white; /* Define a cor do texto dentro da seção como branco */
-    height: 100vh; /* Define a altura da seção para 100% da altura da tela */
-    transition: .3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
+    /* Define a posição relativa para que os elementos internos possam ser posicionados em relação a ela */
+    position: relative;
+    /* Define a cor do texto dentro da seção como branco */
+    color: white;
+    /* Define a altura da seção para 100% da altura da tela */
+    height: 102vh;
+    /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
+    transition: .3s;
 
-    .bg-img {
-        position: absolute; /* Posiciona a imagem de forma absoluta em relação à `.banner` */
-        z-index: 1; /* Garante que a imagem fique abaixo do conteúdo */
-        top: 0; /* Posiciona a imagem no topo da seção */
-        left: 0; /* Posiciona a imagem à esquerda da seção */
-        height: 100%; /* Define a altura da imagem para 100% da altura da seção */
-        width: 100%; /* Define a largura da imagem para 100% da largura da seção */
-        object-fit: cover; /* Faz com que a imagem cubra toda a área do contêiner */
-        object-position: center; /* Centraliza a imagem dentro do contêiner */
+    /* Estilos da imagem de fundo do banner */
+    .background-image {
+        /* Posiciona a imagem de forma absoluta em relação ao banner */
+        position: absolute;
+        /* Garante que a imagem fique abaixo do conteúdo */
+        z-index: 1;
+        /* Define a altura da imagem para 100% da altura da seção */
+        height: 100%;
+        /* Define a largura da imagem para 100% da largura da seção */
+        width: 100%;
+        /* Faz com que a imagem cubra toda a área do contêiner */
+        object-fit: cover;
+        /* Centraliza a imagem dentro do contêiner */
+        object-position: center;
     }
 
+    /* Área que contém o conteúdo principal do banner */
     .banner-content {
-        position: relative; /* Define a posição relativa para que o z-index funcione corretamente */
-        z-index: 2; /* Garante que o conteúdo esteja acima da imagem de fundo */
-        display: flex; /* Usa flexbox para o layout */
-        flex-direction: column; /* Alinha os itens em coluna */
-        justify-content: center; /* Centraliza os itens verticalmente */
-        align-items: center; /* Centraliza os itens horizontalmente */
-        height: 100%; /* Ocupa 100% da altura da seção */
-        margin: 0 30px; /* Adiciona margem horizontal de 30 pixels */
-        text-align: center; /* Centraliza o texto dentro da `.banner-content` */
+        /* Define a posição relativa para que o z-index funcione corretamente */
+        position: relative;
+        /* Garante que o conteúdo esteja acima da imagem de fundo */
+        z-index: 2;
+        /* Usa flexbox para o layout */
+        display: flex;
+        /* Alinha os itens em coluna */
+        flex-direction: column;
+        /* Centraliza os itens verticalmente */
+        justify-content: center;
+        /* Centraliza os itens horizontalmente */
+        align-items: center;
+        /* Ocupa 100% da altura da seção */
+        height: 100%;
+        /* Adiciona margem horizontal de 30 pixels */
+        margin: 0 30px;
+        /* Centraliza o texto dentro da `.banner-content` */
+        text-align: center;
         
+        /* Estilo aplicado ao título principal */
         h1 {
-            font-size: 2em; /* Define o tamanho da fonte para o título */
-            font-weight: 500; /* Define a espessura da fonte para o título */
+            /* Define o tamanho da fonte para o título */
+            font-size: 2em;
+            /* Define a espessura da fonte para o título */
+            font-weight: 500;
         }
 
+         /* Estilo aplicado ao parágrafo dentro do banner */
         p {
+            /* Define o tamanho da fonte para o texto do parágrafo */
             font-size: 1.2em;
         }
 
+        /* Estilos para a imagem animada exibida abaixo do subtítulo */
         img {
-            height: 40px; /* Define o tamanho da imagem animada do subtítulo */
-            width: 100%; /* Define a largura da imagem animada do subtítulo */
-            user-drag: none; /* Desativa a possibilidade de arrastar a imagem */
-            -webkit-user-drag: none; /* Desativa a possibilidade de arrastar a imagem no Safari */
+            /* Define o tamanho da imagem animada do subtítulo */
+            height: 40px;
+            /* Define a largura da imagem animada do subtítulo */
+            width: 100%;
+            /* Desativa a possibilidade de arrastar a imagem */
+            user-drag: none;
+            /* Desativa a possibilidade de arrastar a imagem no Safari */
+            -webkit-user-drag: none;
         }
     }
 
+    /* Estilos do botão "Click to More" que fica fixado no rodapé */
     .click-to-more {
-        display: flex; /* Usa flexbox para o layout */
-        flex-direction: column; /* Alinha os itens em coluna */
-        align-items: center; /* Centraliza os itens horizontalmente */
-        position: fixed; /* Fixa a posição do botão na tela */
-        z-index: 3; /* Garante que o botão esteja acima de outros elementos */
-        right: 50%; /* Posiciona o botão à direita do centro da tela */
-        bottom: 5px; /* Posiciona o botão 5 pixels acima da borda inferior da tela */
-        cursor: pointer; /* Define o cursor como ponteiro ao passar sobre o botão */
-        animation: bounce 1.5s infinite; /* Aplica a animação de pulo */
-        width: 100%; /* Definindo a largura do botão */
-        font-size: 16px; /* Definindo o tamanho da font */
+        /* Usa flexbox para o layout */
+        display: flex;
+        /* Alinha os itens em coluna */
+        flex-direction: column;
+        /* Centraliza os itens horizontalmente */
+        align-items: center;
+        /* Fixa a posição do botão na tela */
+        position: fixed;
+        /* Garante que o botão esteja acima de outros elementos */
+        z-index: 3;
+        /* Posiciona o botão à direita do centro da tela */
+        right: 50%;
+        /* Posiciona o botão 5 pixels acima da borda inferior da tela */
+        bottom: 5px;
+        /* Define o cursor como ponteiro ao passar sobre o botão */
+        cursor: pointer;
+        /* Aplica a animação de pulo */
+        animation: bounce 1.5s infinite;
+        /* Definindo a largura do botão */
+        width: 100%;
+        /* Definindo o tamanho da font */
+        font-size: 16px;
 
+        /* Estilos para o texto e ícone dentro do botão */
         span, i {
-            color: white; /* Define a cor do texto e do ícone dentro do botão como branco */
-            transition: .3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
+            /* Define a cor do texto e do ícone dentro do botão como branco */
+            color: white;
+            /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
+            transition: .3s;
         }
     }
 }
 
+/* Estilos aplicados quando o HTML não está no topo do scroll */
 html:not([scroll-status='top']) {
+    /* Ajusta o banner quando o usuário já rolou a página */
     .banner {
-        height: 75vh; /* Reduz a altura da seção quando o scroll não está no topo */
+        /* Reduz a altura da seção quando o scroll não estiver no topo */
+        height: 75vh;
     }
 
+    /* Ajusta o botão "Click to More" quando o usuário rola a página */
     .click-to-more {
-        visibility: hidden; /* Torna o botão invisível quando não no topo */
+        /* Torna o botão invisível quando não estiver no topo */
+        visibility: hidden;
         
+        /* Estilos para o texto e ícone dentro do botão */
         span, i {
-            color: transparent; /* Torna o texto e o ícone transparentes quando não no topo */
+            /* Torna o texto e o ícone transparentes quando não estiver no topo */
+            color: transparent;
         }
     }
 }
 
+/* Animação responsável pelo pequeno pulo do botão */
 @keyframes bounce {
     0%, 100% {
-        transform: translate(50%, 0); /* Define a posição inicial e final da animação */
+        /* Define a posição inicial e final da animação */
+        transform: translate(50%, 0);
     }
     50% {
-        transform: translate(50%, -10px); /* Define a posição intermediária da animação para criar o efeito de pulo */
+        /* Define a posição intermediária da animação para criar o efeito de pulo */
+        transform: translate(50%, -10px);
     }
 }

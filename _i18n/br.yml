@@ -9,40 +9,34 @@ banner:
   click_to_more: "Desça para saber mais"
 footer:
   experience: "Você está acessando a experiência:"
-certificate:
-  tags:
-    course: "curso"
-    project: "projeto"
-    webinar: "webinário"
-    bootcamp: "treinamento"
 page:
   index:
     title: "Início"
     subtitles:
       one: "Sou Engenheiro de Software"
-      two: "Sou Criador de Conteúdo Tech"
-      three: "Estudo Computação em Nuvem"
-      four: "Sou Fascinado em Astronomia"
-      five: "Sou Amante de Animais"
-      six: "Sou Apaixonado por Músicas"
-      seven: "Sou Aficionado por Games"
-      eight: "Sou Fã de Automobilismo"
-  blog:
-    title: "Blog"
-    banner:
-      title: "Meu blog"
-    subtitle: "Compartilho coisas que aprendo"
-  games:
-    title: "Jogos"
-    banner:
-      title: "Meus Jogos"
-    subtitle: "Meu portfólio de Jogos Digitais"
-  investigation:
-    title: "Investigação Digital"
-    title_header: "Investigação"
-    banner:
-      title: "Investigação Digital"
-    subtitle: "Contrate serviços de Investigação Digital"
-  certificates:
-    title: "Certificados"
-    section_certificates: "Meus certificados"
+      two: "Sou Fascinado em Astronomia"
+      three: "Sou do Clube de Desbravadores"
+    sections:
+      lifestyle:
+        title: "Estilo de Vida"
+        subtitle: "Onde vivências, valores e propósito se encontram"
+  pathfinders:
+    title: "Desbravadores"
+    title_menu: "DBV"
+    subtitle: "Minhas experiências no universo desbravador"
+    sections:
+      experiences:
+        title: "Experiências"
+        subtitle: "Séries de relatos, memórias e vivências no Clube de Desbravadores"
+      foundation:
+        title: "Fundamentação"
+        subtitle: "Séries temáticas de estudo, prática e aprofundamento contínuo"
+  messenger:
+    title: "MENSAGEIRO: Entre Trilhas e Lenços"
+    subtitle: "Uma jornada que recomeça entre trilhas, lenços e crescimento pessoal"
+  books:
+    title: "Leituras da Jornada"
+    subtitle: "Livros lidos, ideias absorvidas, caminhos ampliados"
+  honors:
+    title: "Especialidades"
+    subtitle: "Teoria, prática e orientações baseadas na vivência"
