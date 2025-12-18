@@ -32,11 +32,11 @@ page:
         title: "Foundation"
         subtitle: "Themed series focused on study, practice, and ongoing learning"
   messenger:
-    title: "Messenger: Between Trails and Neckerchiefs"
-    subtitle: "A journey that begins again among trails, neckerchiefs, and personal growth"
+    title: "MESSENGER: Between Trails and Scarves"
+    subtitle: "A journey that begins again among trails, scarves, and personal growth"
   books:
-    title: "Livros..."
-    subtitle: "Livros..."
-  specialties:
-    title: "Especialidades..."
-    subtitle: "Especialidades..."
+    title: "Journey Readings"
+    subtitle: "Books read, ideas absorbed, paths expanded"
+  honors:
+    title: "Honors"
+    subtitle: "Theory, practice, and guidance based on experience"

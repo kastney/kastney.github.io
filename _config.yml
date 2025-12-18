@@ -19,9 +19,9 @@ collections:
     output: true
   books_us:
     output: true
-  specialties_br:
+  honors_br:
     output: true
-  specialties_us:
+  honors_us:
     output: true
 
 # Markdown settings

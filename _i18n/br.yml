@@ -32,11 +32,11 @@ page:
         title: "Fundamentação"
         subtitle: "Séries temáticas de estudo, prática e aprofundamento contínuo"
   messenger:
-    title: "Mensageiro: Entre Trilhas e Lenços"
+    title: "MENSAGEIRO: Entre Trilhas e Lenços"
     subtitle: "Uma jornada que recomeça entre trilhas, lenços e crescimento pessoal"
   books:
-    title: "Livros..."
-    subtitle: "Livros..."
-  specialties:
-    title: "Especialidades..."
-    subtitle: "Especialidades..."
+    title: "Leituras da Jornada"
+    subtitle: "Livros lidos, ideias absorvidas, caminhos ampliados"
+  honors:
+    title: "Especialidades"
+    subtitle: "Teoria, prática e orientações baseadas na vivência"
