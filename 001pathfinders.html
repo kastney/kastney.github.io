@@ -1,0 +1,46 @@
+---
+layout: default
+code: "CV1sgefOykWhD2xNDn7pLQ"
+title: page.pathfinders.title
+subtitle: page.pathfinders.subtitle
+permalink: "/desbravadores/"
+permalink_us: "/pathfinders/"
+menu:
+    enabled: true
+    title: page.pathfinders.title_menu
+banner:
+    title: page.pathfinders.title
+    image: "/assets/pages/pathfinders/banner.jpg"
+card:
+    thumbnail: "/assets/pages/pathfinders/banner.jpg"
+    title: page.pathfinders.title
+    subtitle: page.pathfinders.subtitle
+---
+
+<!-- Seção de experiências -->
+
+{% capture section_experiencer_title %}
+    {% translate page.pathfinders.sections.experiences.title %}
+{% endcapture %}
+
+{% capture section_experiencer_subtitle %}
+    {% translate page.pathfinders.sections.experiences.subtitle %}
+{% endcapture %}
+
+{% include cards/startSectionCard.html title=section_experiencer_title subtitle=section_experiencer_subtitle %}
+    {% include cards/thumbnailPageCard.html code="5L67Ledq8Uy2nU48J5RSyg" %}
+{% include cards/endSectionCard.html %}
+
+<!-- Seção de coleções -->
+{% capture section_foundation_title %}
+    {% translate page.pathfinders.sections.foundation.title %}
+{% endcapture %}
+
+{% capture section_foundation_subtitle %}
+    {% translate page.pathfinders.sections.foundation.subtitle %}
+{% endcapture %}
+
+{% include cards/startSectionCard.html title=section_foundation_title subtitle=section_foundation_subtitle %}
+    {% include cards/thumbnailPageCard.html	code="9SdSwMIzkE6SeWyf0eqcHg" %}
+    {% include cards/thumbnailPageCard.html	code="AqcovmdNK0i8TPeRxCbEsQ" %}
+{% include cards/endSectionCard.html %}

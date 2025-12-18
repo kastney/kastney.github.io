@@ -21,7 +21,7 @@
                 <nav>
                     <ul>
                         {%- for item in items -%}
-                            {%- if item.menu_enabled == true -%}
+                            {%- if item.menu.enabled == true -%}
                                 {%- assign href = "" -%}
                                 {%- if site.lang != site.languages.first -%}
                                     {%- assign href = "/" | append: site.lang -%}
@@ -30,16 +30,16 @@
                                     {%- assign href = href | append: item.url -%}
                                 {%- endif -%}
                                 
-                                {%- if item.title_header != null -%}
+                                {%- if item.menu.title != null -%}
                                     {%- capture item_text -%}
-                                        {%- translate item.title_header -%}
+                                        {%- translate item.menu.title -%}
                                     {%- endcapture -%}
-                                    <li><a target="_self" href="{{href}}">{{item_text | upcase | escape}}</a></li>
+                                    <li><a target="_self" href="{{ href }}">{{item_text | upcase | escape}}</a></li>
                                 {%- else -%}
                                     {%- capture item_text -%}
                                         {%- translate item.title -%}
                                     {%- endcapture -%}
-                                    <li><a target="_self" href="{{href}}">{{item_text | upcase | escape}}</a></li>
+                                    <li><a target="_self" href="{{ href }}">{{item_text | upcase | escape}}</a></li>
                                 {%- endif -%}
                             {%- endif -%}
                         {%- endfor -%}

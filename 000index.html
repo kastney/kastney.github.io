@@ -1,0 +1,27 @@
+---
+layout: default
+title: page.index.title
+subtitles: [
+    page.index.subtitles.one,
+    page.index.subtitles.two,
+    page.index.subtitles.three
+]
+permalink: "/"
+banner:
+    title: core.name
+    image: "/assets/pages/index/banner.jpg"
+---
+
+<!-- Seção de estilo de vida -->
+
+{% capture section_lifestyle_title %}
+    {% translate page.index.sections.lifestyle.title %}
+{% endcapture %}
+
+{% capture section_lifestyle_subtitle %}
+    {% translate page.index.sections.lifestyle.subtitle %}
+{% endcapture %}
+
+{% include cards/startSectionCard.html title=section_lifestyle_title subtitle=section_lifestyle_subtitle %}
+    {% include cards/thumbnailPageCard.html code="CV1sgefOykWhD2xNDn7pLQ" %}
+{% include cards/endSectionCard.html %}
