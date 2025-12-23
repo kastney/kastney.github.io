@@ -9,9 +9,11 @@
     /* Ajustes globais de parágrafo dentro da seção */
     p {
         /* Ajustes globais de parágrafo dentro da seção */
-        font-size: 0.8em;
+        font-size: 0.9em;
         /* Ajustes globais de parágrafo dentro da seção */
         text-indent: 0;
+        /* Colocando uma altura confortável para leitura */
+        line-height: 1.2;
     }
 
     /* Layout que organiza os cartões em grid responsivo */
@@ -154,7 +156,7 @@
             /* Fonte menor para texto auxiliar */
 			font-size: 0.8rem;
             /* Altura de linha confortável para leitura */
-			line-height: 1.45;
+			line-height: 1.2;
 		}
 	}
 }

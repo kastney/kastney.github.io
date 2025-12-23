@@ -1,4 +1,4 @@
-{%- if page.banner -%}
+{%- if page.banner and page.banner.type != 'none' -%}
     {%- assign has_banner = true -%}
 {%- else -%}
     {%- assign has_banner = false -%}

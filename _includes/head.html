@@ -15,9 +15,9 @@
     {%- capture site_title -%}
       {%- translate core.name -%}
     {%- endcapture -%}
-    {%- if page.title != null -%}
+    {%- if page.site and page.site.title != null -%}
       {%- capture page_title -%}
-        {%- translate page.title -%}
+        {%- translate page.site.title -%}
       {%- endcapture -%}
       {{page_title}} | {{site_title}}
     {%- else -%}

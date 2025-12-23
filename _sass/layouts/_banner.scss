@@ -1,151 +1,172 @@
-/* Estilos da seção principal de banner */
-.banner {
-    /* Define a posição relativa para que os elementos internos possam ser posicionados em relação a ela */
+/* Estilo para o banner com visualização completa da mídia (banner.type = "full") */
+.banner-full {
+    /* Define a posição relativa para permitir o posicionamento absoluto da mídia de fundo e do overlay */
     position: relative;
-    /* Define a cor do texto dentro da seção como branco */
-    color: white;
-    /* Define a altura da seção para 100% da altura da tela */
-    height: 102vh;
-    /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
+    /* Aplica uma transição suave ao alterar propriedades como altura */
     transition: .3s;
+    /* Define a altura inicial do banner como levemente maior que a viewport para criar o efeito de "full hero" */
+    height: 104vh;
+    /* Define a cor padrão do texto dentro do banner */
+    color: white;
 
-    /* Estilos da imagem de fundo do banner */
+    /* Mídia de fundo (imagem ou vídeo) */
     .background-media {
-        /* Posiciona a imagem de forma absoluta em relação ao banner */
+        /* Permite que a mídia cubra todo o banner */
         position: absolute;
-        /* Garante que a imagem fique abaixo do conteúdo */
+        /* Mantém a mídia abaixo do conteúdo e do overlay */
         z-index: 0;
-        /* Utilizado para evitar bugs no navegador Safari */
+        /* Evita problemas de renderização no Safari */
         display: block;
-        /* Define a altura da imagem para 100% da altura da seção */
+        /* Faz a mídia ocupar toda a altura do banner */
         height: 100%;
-        /* Define a largura da imagem para 100% da largura da seção */
+        /* Faz a mídia ocupar toda a largura do banner */
         width: 100%;
-        /* Faz com que a imagem cubra toda a área do contêiner */
+        /* Garante que a mídia cubra todo o espaço sem distorcer */
         object-fit: cover;
-        /* Centraliza a imagem dentro do contêiner */
+        /* Centraliza a área visível da mídia */
         object-position: center;
-        /* Remove qualquer borda ou outline */
+        /* Remove qualquer borda padrão */
         border: none;
-        /* Remove a possibilidade de qualquer interação acidental nas mídias */
+        /* Impede qualquer interação do usuário com a mídia */
         pointer-events: none;
     }
 
-    /* Área que contém o conteúdo principal do banner */
+    /* Conteúdo do banner (título, subtítulo, etc.) */
     .banner-content {
-        /* Define a posição relativa para que o z-index funcione corretamente */
+        /* Necessário para controle correto do z-index */
         position: relative;
-        /* Garante que o conteúdo esteja acima da imagem de fundo */
+        /* Mantém o conteúdo acima da mídia e do overlay */
         z-index: 3;
-        /* Usa flexbox para o layout */
+        /* Usa flexbox para centralização */
         display: flex;
-        /* Alinha os itens em coluna */
+        /* Organiza os elementos verticalmente */
         flex-direction: column;
-        /* Centraliza os itens verticalmente */
+        /* Centraliza verticalmente */
         justify-content: center;
-        /* Centraliza os itens horizontalmente */
+        /* Centraliza horizontalmente */
         align-items: center;
-        /* Ocupa 100% da altura da seção */
+        /* Ocupa toda a altura do banner */
         height: 100%;
-        /* Adiciona margem horizontal de 30 pixels */
+        /* Espaçamento horizontal interno */
         margin: 0 30px;
-        /* Centraliza o texto dentro da `.banner-content` */
+        /* Centraliza o texto */
         text-align: center;
         
-        /* Estilo aplicado ao título principal */
+        /* Título do banner */
         h1 {
-            /* Define o tamanho da fonte para o título */
+            /* Define o tamanho do título */
             font-size: 2em;
-            /* Define a espessura da fonte para o título */
+            /* Define um peso médio para melhor leitura */
             font-weight: 500;
         }
 
-         /* Estilo aplicado ao parágrafo dentro do banner */
+         /* Subtítulo do banner */
         p {
-            /* Define o tamanho da fonte para o texto do parágrafo */
+            /* Define o tamanho do texto do subtítulo */
             font-size: 1.2em;
         }
 
-        /* Estilos para a imagem animada exibida abaixo do subtítulo */
+        /* Imagem animada de subtítulos */
         img {
-            /* Define o tamanho da imagem animada do subtítulo */
+            /* Altura padrão da animação */
             height: 40px;
-            /* Define a largura da imagem animada do subtítulo */
+            /* Ocupa toda a largura disponível */
             width: 100%;
-            /* Desativa a possibilidade de arrastar a imagem */
+            /* Impede que a imagem seja arrastada */
             user-drag: none;
-            /* Desativa a possibilidade de arrastar a imagem no Safari */
+            /* Compatibilidade com Safari */
             -webkit-user-drag: none;
         }
     }
 
-    /* Estilos do botão "Click to More" que fica fixado no rodapé */
+    /* Botão "Click to More" */
     .click-to-more {
-        /* Usa flexbox para o layout */
+        /* Usa flexbox para alinhar texto e ícone */
         display: flex;
-        /* Alinha os itens em coluna */
+        /* Organiza verticalmente */
         flex-direction: column;
-        /* Centraliza os itens horizontalmente */
+        /* Centraliza horizontalmente */
         align-items: center;
-        /* Fixa a posição do botão na tela */
+        /* Fixa o botão na viewport */
         position: fixed;
-        /* Garante que o botão esteja acima de outros elementos */
+        /* Mantém o botão acima de todos os elementos */
         z-index: 4;
-        /* Posiciona o botão à direita do centro da tela */
+        /* Centraliza horizontalmente usando transform no keyframe */
         right: 50%;
-        /* Posiciona o botão 5 pixels acima da borda inferior da tela */
+        /* Posiciona próximo ao rodapé */
         bottom: 5px;
-        /* Define o cursor como ponteiro ao passar sobre o botão */
+        /* Indica interatividade */
         cursor: pointer;
-        /* Aplica a animação de pulo */
+        /* Animação de destaque visual */
         animation: bounce 1.5s infinite;
-        /* Definindo a largura do botão */
+        /* Ocupa toda a largura para facilitar clique */
         width: 100%;
-        /* Definindo o tamanho da font */
+        /* Tamanho base da fonte */
         font-size: 16px;
 
-        /* Estilos para o texto e ícone dentro do botão */
+        /* Estilo do texto e ícone */
         span, i {
-            /* Define a cor do texto e do ícone dentro do botão como branco */
+            /* Cor branca para contraste */
             color: white;
-            /* Adiciona uma transição suave de 0.3 segundos para mudanças de estilo */
+            /* Transição suave ao ocultar */
             transition: .3s;
         }
     }
 
-    /* Pseudo-elemento usado como camada de overlay sobre o banner */
+    /* Overlay escuro sobre a mídia */
     &::before {
-        /* Cria um pseudo-elemento vazio apenas para fins visuais */
+        /* Cria uma camada visual acima da mídia */
         content: "";
-        /* Posiciona o overlay de forma absoluta em relação ao banner */
+        /* Posicionamento absoluto sobre o banner */
         position: absolute;
-        /* Faz o overlay ocupar toda a área do banner (top, right, bottom, left = 0) */
+        /* Ocupa todo o espaço do banner */
         inset: 0;
-        /* Garante que o overlay fique acima da imagem/vídeo e abaixo do conteúdo */
+        /* Fica acima da mídia e abaixo do conteúdo */
         z-index: 2;
-        /* Aplica um fundo preto semitransparente para melhorar o contraste do texto */
+        /* Escurece levemente a mídia para melhorar legibilidade */
         background: rgba(0, 0, 0, 0.35);
     }
 }
 
+/* Estilo para o banner sem mídia (banner.type = "none") */
+.banner-none {
+    /* Reduz o espaçamento vertical entre linhas */
+    line-height: 1.2;
+    
+    /* Título da página */
+    h1 {
+        /* Espaçamento superior para afastar do header */
+        margin-top: 60px;
+        /* Tamanho grande para destacar o título */
+        font-size: xx-large;
+    }
+    
+    /* Subtítulo da página */
+    p {
+        /* Tamanho de fonte destacado, mas menor que o título */
+        font-size: x-large;
+        /* Espaçamento inferior antes do conteúdo principal */
+        margin-bottom: 30px;
+    }
+}
 
-/* Estilos aplicados quando o HTML não está no topo do scroll */
+/* Ajustes quando o usuário sai do topo do scroll */
 html:not([scroll-status='top']) {
     /* Ajusta o banner quando o usuário já rolou a página */
-    .banner {
-        /* Reduz a altura da seção quando o scroll não estiver no topo */
+    .banner-full {
+        /* Reduz a altura do banner após o scroll */
         height: 75vh;
-    }
-
-    /* Ajusta o botão "Click to More" quando o usuário rola a página */
-    .click-to-more {
-        /* Torna o botão invisível quando não estiver no topo */
-        visibility: hidden;
         
-        /* Estilos para o texto e ícone dentro do botão */
-        span, i {
-            /* Torna o texto e o ícone transparentes quando não estiver no topo */
-            color: transparent;
+        /* Ajustes no botão "Click to More" */
+        .click-to-more {
+            /* Remove visualmente o botão */
+            visibility: hidden;
+            
+            /* Torna texto e ícone invisíveis */
+            span, i {
+                /* Torna o texto e o ícone transparentes quando não estiver no topo */
+                color: transparent;
+            }
         }
     }
 }

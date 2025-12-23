@@ -1,26 +1,28 @@
-{%- if page.banner -%}
-    <section class="banner">
+{%- if page.banner and page.banner.type != 'none' -%}
+    <section class="banner-{{ page.banner.type | default: 'full'}}">
         {%- if page.banner.video or page.banner.image -%}
             {%- if page.banner.video -%}
                 <!-- Vídeo de Fundo do Banner -->
-                 <video class="background-media"
-                        autoplay
-                        muted
-                        loop
-                        playsinline
-                        preload="metadata"
-                        {%- if page.banner.image -%}
-                            poster="{{ page.banner.image }}"
-                        {%- endif -%}
-                        oncontextmenu="return false;">
+                <video
+                    class="background-media"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    {%- if page.banner.image -%}
+                        poster="{{ page.banner.image }}"
+                    {%- endif -%}
+                    oncontextmenu="return false;">
                     <source src="{{ page.banner.video }}" type="video/mp4">
                 </video>
             {%- elsif page.banner.image -%}
                 <!-- Imagem de Fundo do Banner -->
-                <img class="background-media"
-                     src="{{ page.banner.image }}"
-                     alt="Banner"
-                     oncontextmenu="return false;" />
+                <img
+                    class="background-media"
+                    src="{{ page.banner.image }}"
+                    alt="Banner"
+                    oncontextmenu="return false;" />
             {%- endif -%}
 
             <!-- Conteúdo do Banner -->
@@ -32,11 +34,11 @@
                     <h1>{%- translate page.title -%}</h1>
                 {%- endif -%}
                 <!-- Banner Subtitle -->
-                {%- if page.subtitle -%}
-                    <p>{%- translate page.subtitle -%}</p>
-                {%- elsif page.subtitles -%}
+                {%- if page.banner.subtitle -%}
+                    <p>{%- translate page.banner.subtitle -%}</p>
+                {%- elsif page.banner.subtitles -%}
                     {%- assign result = "" -%}
-                    {%- for subtitle in page.subtitles -%}
+                    {%- for subtitle in page.banner.subtitles -%}
                         {%- capture translated_subtitle -%}
                             {%- translate subtitle -%}
                         {%- endcapture -%}

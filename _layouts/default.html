@@ -11,7 +11,17 @@ layout: compress
       {%- include views/banner.html -%}
       {%- include views/click_to_top.html -%}
       <section class="content">
-        {{content}}
+        {%- if page.banner and page.banner.type == 'none' -%}
+          <section class="banner-none">
+            {%- if page.banner.title -%}
+              <h1>{%- translate page.banner.title -%}</h1>
+            {%- endif -%}
+            {%- if page.banner.subtitle -%}
+              <p>{%- translate page.banner.subtitle -%}</p>
+            {%- endif -%}
+          </section>
+        {%- endif -%}
+        {{ content }}
       </section>
     </main>
     {%- include views/footer.html -%}
@@ -19,7 +29,7 @@ layout: compress
       {%- include scripts/core.js -%}
       {%- include scripts/scroll-status.js -%}
       {%- include scripts/click-to-top.js -%}
-      {%- if page.banner -%}
+      {%- if page.banner and page.banner.type != 'none' -%}
         {%- include scripts/click-to-more.js -%}
       {%- endif -%}
       {%- include scripts/contextmenu-disabled.js -%}
