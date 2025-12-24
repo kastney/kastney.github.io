@@ -23,20 +23,20 @@ page:
   pathfinders:
     title: "Desbravadores"
     title_menu: "DBV"
-    subtitle: "Minhas experiências no universo desbravador"
+    subtitle: "Minhas experiências no universo Desbravador"
     sections:
       experiences:
         title: "Experiências"
-        subtitle: "Séries de relatos, memórias e vivências no Clube de Desbravadores"
+        subtitle: "Séries de histórias, memórias e vivências do universo Desbravador"
       foundation:
         title: "Fundamentação"
-        subtitle: "Séries temáticas de estudo, prática e aprofundamento contínuo"
+        subtitle: "Séries temáticas de estudo, prática e aprofundamento no universo Desbravador"
   messenger:
     title: "MENSAGEIRO: Entre Trilhas e Lenços"
-    subtitle: "Uma jornada que recomeça entre trilhas, lenços e crescimento pessoal"
+    subtitle: "Uma jornada de recomeço entre trilhas, lenços e crescimento pessoal"
   books:
-    title: "Leituras da Jornada"
+    title: "Literatura Desbravadora"
     subtitle: "Livros lidos, ideias absorvidas, caminhos ampliados"
   honors:
     title: "Especialidades"
-    subtitle: "Teoria, prática e orientações baseadas na vivência"
+    subtitle: "Insights teóricos e práticos a partir de especialidades conquistadas"

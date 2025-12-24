@@ -23,20 +23,20 @@ page:
   pathfinders:
     title: "Pathfinders"
     title_menu: "PF"
-    subtitle: "My journey in the Pathfinders world"
+    subtitle: "My experiences in the Pathfinders world"
     sections:
       experiences:
         title: "Experiences"
-        subtitle: "Series of stories, memories, and lived moments in the Pathfinder Club"
+        subtitle: "Series of stories, memories, and lived experiences from the Pathfinders world"
       foundation:
         title: "Foundation"
-        subtitle: "Themed series focused on study, practice, and ongoing learning"
+        subtitle: "Thematic series on study, practice, and deeper exploration in the Pathfinders world"
   messenger:
     title: "MESSENGER: Between Trails and Scarves"
-    subtitle: "A journey that begins again among trails, scarves, and personal growth"
+    subtitle: "A journey of renewal through trails, scarves, and personal growth"
   books:
-    title: "Journey Readings"
+    title: "Pathfinder Literature"
     subtitle: "Books read, ideas absorbed, paths expanded"
   honors:
     title: "Honors"
-    subtitle: "Theory, practice, and guidance based on experience"
+    subtitle: "Theoretical and practical insights from earned honors"

@@ -141,6 +141,8 @@
 			position: relative;
             /* Coloca o texto acima do pseudo-elemento */
 			z-index: 2;
+            /* Colocando uma altura confortável para leitura */
+            line-height: 1.2;
 		}
 
         /* Título do card */
@@ -155,8 +157,6 @@
 		p {
             /* Fonte menor para texto auxiliar */
 			font-size: 0.8rem;
-            /* Altura de linha confortável para leitura */
-			line-height: 1.2;
 		}
 	}
 }
