@@ -1,0 +1,34 @@
+---
+layout: default
+permalink: "/aplicativos/"
+permalink_us: "/applications/"
+site:
+    title: page.pathfinders.title
+menu:
+    enabled: true
+    title: page.pathfinders.title_menu
+banner:
+    type: full
+    title: page.pathfinders.title
+    subtitle: page.pathfinders.subtitle
+    image: "/assets/pages/pathfinders/banner.jpg"
+code: "qbpktM69P0aZVaqOr46t0A"
+card:
+    thumbnail: "/assets/pages/pathfinders/banner.jpg"
+    title: page.pathfinders.title
+    subtitle: page.pathfinders.subtitle
+---
+
+<!-- Seção de experiências -->
+
+{% capture section_experiencer_title %}
+    {% translate page.pathfinders.sections.experiences.title %}
+{% endcapture %}
+
+{% capture section_experiencer_subtitle %}
+    {% translate page.pathfinders.sections.experiences.subtitle %}
+{% endcapture %}
+
+{% include cards/startSectionCard.html title=section_experiencer_title subtitle=section_experiencer_subtitle %}
+    {% include cards/thumbnailPageCard.html code="5L67Ledq8Uy2nU48J5RSyg" %}
+{% include cards/endSectionCard.html %}

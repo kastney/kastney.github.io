@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Banner Blend – Teste</title>
+
+  <style>
+    /* RESET BÁSICO */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: white;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    /* ===============================
+       BANNER BLEND
+       =============================== */
+    .banner-blend {
+      position: relative;
+      height: 60vh; /* altura fixa */
+      min-height: 420px;
+      overflow: hidden;
+      color: white;
+    }
+
+    /* MÍDIA */
+    .banner-blend .background-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ESCURECIMENTO LEVE */
+    .banner-blend::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+    }
+
+    /* CONTEÚDO CENTRAL */
+    .banner-blend .banner-content {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .banner-blend h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .banner-blend p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+    }
+
+    /* ===============================
+       ZONA DE BLEND (TRANSIÇÃO)
+       =============================== */
+    .banner-blend .blend-transition {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 500px;
+      z-index: 2;
+
+      /* Gradiente que dissolve a imagem no branco */
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 40%,
+        rgba(255, 255, 255, 0.85) 75%,
+        rgba(255, 255, 255, 1) 100%
+      );
+    }
+
+    /* ===============================
+       CONTEÚDO DA PÁGINA
+       =============================== */
+    .content {
+      position: relative;
+      background: white;
+      padding: 60px 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .content p {
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+      color: #333;
+    }
+
+    /* ACESSIBILIDADE */
+    @media (prefers-reduced-motion: reduce) {
+      .banner-blend .blend-transition {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BANNER BLEND -->
+  <section class="banner-blend">
+    <img
+      class="background-media"
+      src="/assets/pages/index/banner.jpg"
+      alt="Banner" />
+
+    <div class="banner-content">
+      <h1>Título do Banner</h1>
+      <p>Subtítulo com transição suave</p>
+    </div>
+
+    <!-- CAMADA DE TRANSIÇÃO -->
+    <div class="blend-transition"></div>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <section class="content">
+    <h2>Conteúdo da Página</h2>
+    <p>
+      Aqui começa o conteúdo real da página.  
+      Note como a imagem do banner não termina de forma abrupta,  
+      mas se dissolve suavemente no fundo branco.
+    </p>
+
+    <p>
+      O efeito de vidro fosco ajuda a criar uma transição elegante,
+      mantendo o visual moderno e sem poluir a interface.
+    </p>
+
+    <p>
+      Esse layout funciona muito bem para páginas internas,
+      404, artigos especiais e seções institucionais.
+    </p>
+       <p>
+      Aqui começa o conteúdo real da página.  
+      Note como a imagem do banner não termina de forma abrupta,  
+      mas se dissolve suavemente no fundo branco.
+    </p>
+
+    <p>
+      O efeito de vidro fosco ajuda a criar uma transição elegante,
+      mantendo o visual moderno e sem poluir a interface.
+    </p>
+
+    <p>
+      Esse layout funciona muito bem para páginas internas,
+      404, artigos especiais e seções institucionais.
+    </p>
+       <p>
+      Aqui começa o conteúdo real da página.  
+      Note como a imagem do banner não termina de forma abrupta,  
+      mas se dissolve suavemente no fundo branco.
+    </p>
+
+    <p>
+      O efeito de vidro fosco ajuda a criar uma transição elegante,
+      mantendo o visual moderno e sem poluir a interface.
+    </p>
+
+    <p>
+      Esse layout funciona muito bem para páginas internas,
+      404, artigos especiais e seções institucionais.
+    </p>
+       <p>
+      Aqui começa o conteúdo real da página.  
+      Note como a imagem do banner não termina de forma abrupta,  
+      mas se dissolve suavemente no fundo branco.
+    </p>
+
+    <p>
+      O efeito de vidro fosco ajuda a criar uma transição elegante,
+      mantendo o visual moderno e sem poluir a interface.
+    </p>
+
+    <p>
+      Esse layout funciona muito bem para páginas internas,
+      404, artigos especiais e seções institucionais.
+    </p>
+       <p>
+      Aqui começa o conteúdo real da página.  
+      Note como a imagem do banner não termina de forma abrupta,  
+      mas se dissolve suavemente no fundo branco.
+    </p>
+
+    <p>
+      O efeito de vidro fosco ajuda a criar uma transição elegante,
+      mantendo o visual moderno e sem poluir a interface.
+    </p>
+
+    <p>
+      Esse layout funciona muito bem para páginas internas,
+      404, artigos especiais e seções institucionais.
+    </p>
+       <p>
+      Aqui começa o conteúdo real da página.  
+      Note como a imagem do banner não termina de forma abrupta,  
+      mas se dissolve suavemente no fundo branco.
+    </p>
+
+    <p>
+      O efeito de vidro fosco ajuda a criar uma transição elegante,
+      mantendo o visual moderno e sem poluir a interface.
+    </p>
+
+    <p>
+      Esse layout funciona muito bem para páginas internas,
+      404, artigos especiais e seções institucionais.
+    </p>
+       <p>
+      Aqui começa o conteúdo real da página.  
+      Note como a imagem do banner não termina de forma abrupta,  
+      mas se dissolve suavemente no fundo branco.
+    </p>
+
+    <p>
+      O efeito de vidro fosco ajuda a criar uma transição elegante,
+      mantendo o visual moderno e sem poluir a interface.
+    </p>
+
+    <p>
+      Esse layout funciona muito bem para páginas internas,
+      404, artigos especiais e seções institucionais.
+    </p>
+       <p>
+      Aqui começa o conteúdo real da página.  
+      Note como a imagem do banner não termina de forma abrupta,  
+      mas se dissolve suavemente no fundo branco.
+    </p>
+
+    <p>
+      O efeito de vidro fosco ajuda a criar uma transição elegante,
+      mantendo o visual moderno e sem poluir a interface.
+    </p>
+
+    <p>
+      Esse layout funciona muito bem para páginas internas,
+      404, artigos especiais e seções institucionais.
+    </p>
+  </section>
+
+</body>
+</html>
