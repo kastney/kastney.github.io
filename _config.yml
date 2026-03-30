@@ -23,6 +23,10 @@ collections:
     output: true
   honors_us:
     output: true
+  bible_br:
+    output: true
+  bible_us:
+    output: true
 
 # Markdown settings
 kramdown:

@@ -20,6 +20,13 @@ page:
       lifestyle:
         title: "Estilo de Vida"
         subtitle: "Onde vivências, valores e propósito se encontram"
+      applications:
+        title: "Meus Softwares"
+        subtitle: "Sistemas e aplicações que eu desenvolvi"
+  applications:
+    title: "Aplicativos Móveis"
+    title_menu: "APPs"
+    subtitle: "Aplicativos móveis criados por mim"
   pathfinders:
     title: "Desbravadores"
     title_menu: "DBV"
@@ -31,6 +38,9 @@ page:
       foundation:
         title: "Fundamentação"
         subtitle: "Séries temáticas de estudo, prática e aprofundamento no universo Desbravador"
+      spirituality:
+        title: "Espiritualidade"
+        subtitle: "Séries de reflexões, fé e crescimento espiritual"
   messenger:
     title: "MENSAGEIRO: Entre Trilhas e Lenços"
     subtitle: "Uma jornada de recomeço entre trilhas, lenços e crescimento pessoal"
@@ -40,3 +50,6 @@ page:
   honors:
     title: "Especialidades"
     subtitle: "Insights teóricos e práticos a partir de especialidades conquistadas"
+  bible:
+    title: "Ano Bíblico"
+    subtitle: "Guia para leitura da Bíblia ao longo de um ano"

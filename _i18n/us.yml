@@ -20,6 +20,13 @@ page:
       lifestyle:
         title: "Lifestyle"
         subtitle: "Where experiences, values, and purpose come together"
+      applications:
+        title: "My Softwares"
+        subtitle: "Systems and applications I’ve developed"
+  applications:
+    title: "Mobile Applications"
+    title_menu: "APPs"
+    subtitle: "Mobile apps I’ve built"
   pathfinders:
     title: "Pathfinders"
     title_menu: "PF"
@@ -31,6 +38,9 @@ page:
       foundation:
         title: "Foundation"
         subtitle: "Thematic series on study, practice, and deeper exploration in the Pathfinders world"
+      spirituality:
+        title: "Spirituality"
+        subtitle: "Series on reflection, faith, and spiritual growth"
   messenger:
     title: "MESSENGER: Between Trails and Scarves"
     subtitle: "A journey of renewal through trails, scarves, and personal growth"
@@ -40,3 +50,6 @@ page:
   honors:
     title: "Honors"
     subtitle: "Theoretical and practical insights from earned honors"
+  bible:
+    title: "Bible in a Year"
+    subtitle: "A guide for reading the Bible over the course of a year"

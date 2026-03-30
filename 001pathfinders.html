@@ -11,10 +11,10 @@ banner:
     type: full
     title: page.pathfinders.title
     subtitle: page.pathfinders.subtitle
-    image: "/assets/pages/pathfinders/banner.jpg"
+    image: "/assets/images/default.jpeg"
 code: "CV1sgefOykWhD2xNDn7pLQ"
 card:
-    thumbnail: "/assets/pages/pathfinders/banner.jpg"
+    thumbnail: "/assets/images/default.jpeg"
     title: page.pathfinders.title
     subtitle: page.pathfinders.subtitle
 ---
@@ -45,4 +45,17 @@ card:
 {% include cards/startSectionCard.html title=section_foundation_title subtitle=section_foundation_subtitle %}
     {% include cards/thumbnailPageCard.html	code="9SdSwMIzkE6SeWyf0eqcHg" %}
     {% include cards/thumbnailPageCard.html	code="AqcovmdNK0i8TPeRxCbEsQ" %}
+{% include cards/endSectionCard.html %}
+
+<!-- Espiritualidade -->
+{% capture section_spirituality_title %}
+    {% translate page.pathfinders.sections.spirituality.title %}
+{% endcapture %}
+
+{% capture section_spirituality_subtitle %}
+    {% translate page.pathfinders.sections.spirituality.subtitle %}
+{% endcapture %}
+
+{% include cards/startSectionCard.html title=section_spirituality_title subtitle=section_spirituality_subtitle %}
+    {% include cards/thumbnailPageCard.html	code="goEk1yCu30CMLwTLJachuw" %}
 {% include cards/endSectionCard.html %}

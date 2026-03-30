@@ -11,11 +11,11 @@
 <!-- Definição do layout do cartão -->
 {%- assign page = site.pages | where: "code", include.code | first -%}
 {%- if page and page[permalink_key] -%}
-<a class="card" target="_self" rel="bookmark" href="{{ prefix }}{{ page[permalink_key] }}">
-	<div class="card-image">
+<a class="card card-image" target="_self" rel="bookmark" href="{{ prefix }}{{ page[permalink_key] }}">
+	<div class="card_media">
 		<img src="{{ page.card.thumbnail }}" alt="Thumbnail: {% translate page.card.title %}">
 	</div>
-	<div class="card-glass">
+	<div class="card_content">
 		<h3>{% translate page.card.title %}</h3>
 		<p>{% translate page.card.subtitle %}</p>
 	</div>
