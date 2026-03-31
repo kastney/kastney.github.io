@@ -53,3 +53,10 @@ page:
   bible:
     title: "Ano Bíblico"
     subtitle: "Guia para leitura da Bíblia ao longo de um ano"
+    resume: "Esta série de posters do Ano Bíblico é um plano de leitura para um ano, com foco nas principais histórias e ensinamentos da Bíblia. A proposta é ser leve, clara e direta ao ponto, trazendo também reflexões e conteúdos adicionais que ajudam na compreensão e no crescimento espiritual."
+    sections:
+      plan:
+        title: "Plano de Leitura"
+        subtitle: "Veja como as leituras estão distribuídas ao longo de cada dia do ano"
+labels:
+  day: "Dia"

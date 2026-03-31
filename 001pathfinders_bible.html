@@ -18,25 +18,37 @@ collection: bible
 per_page: 30
 ---
 
-Esta série de posters do Ano Bíblico é um plano de leitura para um ano, com foco nas principais histórias e ensinamentos da Bíblia. A proposta é ser leve, clara e direta ao ponto, trazendo também reflexões e conteúdos adicionais que ajudam na compreensão e no crescimento espiritual.
+{%- translate page.bible.resume -%}
+
+<br>
+
+---
 
 <section class="section-card">
+    <h2>{%- translate page.bible.sections.plan.title -%}</h2>
+    <p>{%- translate page.bible.sections.plan.subtitle -%}</p>
+
     <div class="section-card-layout">
         {% assign collection_name = "bible_" | append: site.lang %}
         {% assign items = site[collection_name] %}
 
         {% for post in items %}
-        <a class="card card-text" target="_self" rel="bookmark" href="{{ post.url }}">
-            <div class="card_content">
-                <h3>{{ post.banner.title }}</h3>
-                <p>{{ post.banner.subtitle }}</p>
-
-                <div class="card_meta">
-                    <span>{{ post.date | date: "%d/%m/%Y" }}</span>
-                    <span>{{ post.code }}</span>
+            {% assign post_url = post.url %}
+            {% if site.lang != site.languages.first %}
+                {% assign post_url = "/" | append: site.lang | append: post.url %}
+            {% endif %}
+            <a class="card card-text" target="_self" rel="bookmark" href="{{ post_url }}">
+                <div class="card_content">
+                    <div class="card_meta">
+                        <span>{%- translate labels.day %} {{ post.code | plus: 0 }}</span>
+                        {% assign day = post.date | date: "%-d" %}
+                        {% assign month = post.date | date: "%-m" %}
+                        <span>{{ day | format_date: month, site.lang }}</span>
+                    </div>
+                    <h3>{{ post.banner.title }}</h3>
+                    <p>{{ post.banner.subtitle }}</p>
                 </div>
-            </div>
-        </a>
+            </a>
         {% endfor %}
     </div>
 </section>

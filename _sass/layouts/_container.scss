@@ -89,7 +89,7 @@
     /* Define o eixo principal como vertical */
 	flex-direction: column;
 	/* Espaço entre elementos internos */
-    gap: 6px;
+    gap: 0px;
     /* Espaçamento interno */
 	padding: 1rem;
     /* Permite posicionamento relativo (necessário para pseudo-elementos) */
@@ -124,6 +124,8 @@
 	opacity: 0.7;
     /* Empurra para o final do card */
 	margin-top: auto;
+    /* separa do título */
+    margin-bottom: 4px;
 }
 
 /* Variação do cartão: Cartão com imagem */
@@ -155,6 +157,8 @@
 		z-index: 2;
         /* Evita overflow do pseudo-elemento */
 		overflow: hidden;
+        /* Espaço entre elementos internos */
+        gap: 6px;
 
         /* Efeito de vidro (GLASSMORPHISM) */
 		&::before {
@@ -208,4 +212,13 @@
 .card-text {
     /* Define cor padrão do texto */
     color: $card-text-light;
+
+    /* Conteúdo sobreposto à imagem */
+	.card_content {
+        /* Estilização do subtítulo */
+        p {
+            /* Tamanho levemente menor */
+            font-size: 1.1rem;
+        }
+    }
 }

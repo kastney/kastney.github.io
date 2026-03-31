@@ -53,3 +53,10 @@ page:
   bible:
     title: "Bible in a Year"
     subtitle: "A guide for reading the Bible over the course of a year"
+    resume: "This series of Bible Year posters is a one-year reading plan focused on the main stories and teachings of the Bible. The goal is to keep it light, clear, and to the point, while also including reflections and additional content that help deepen understanding and support spiritual growth."
+    sections:
+      plan:
+        title: "Reading Plan"
+        subtitle: "Explore how the readings are laid out for each day of the year"
+labels:
+  day: "Day"
